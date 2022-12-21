@@ -1,8 +1,19 @@
 import React from 'react'
 
-function Movies() {
+function Movies(props) {
     return (
-        <div>Movies</div>
+        <div>
+            <h1>Movies</h1>
+            {props.movies.map((movie) => {
+                return (
+                    <div key={movie.id}>
+                    <h2>{movie.title}</h2>
+                    <p>{movie.body}</p>
+                </div>
+                )
+                
+            })}
+        </div>
     )
 }
 

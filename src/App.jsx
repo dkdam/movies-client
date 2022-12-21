@@ -3,7 +3,7 @@ import './App.css'
 import axios from 'axios'
 import Movies from './components/Movies'
 
-const URL = "http://http://localhost:3000/api/v1/movies"
+const URL = "http://localhost:3000/api/v1/movies"
 
 const getApiData = () => {
   return axios.get(URL).then((res) => res.data)
@@ -26,7 +26,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello You</h1>
       <Movies movies = {movies} />
     </div>
   )
